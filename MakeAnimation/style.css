@@ -1,0 +1,70 @@
+@keyframes goAround {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+@keyframes stretchBox {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+body {
+  height: 100vh;
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circleContainer {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+  animation: goAround 1s ease-in-out infinite;
+}
+
+.boxContainer {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.box {
+  background-color: white;
+  width: 10px;
+  height: 40px;
+  animation: stretchBox 1s ease infinite;
+}
+
+.box:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.box:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.box:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.box:nth-child(5) {
+  animation-delay: 0.4s;
+}
